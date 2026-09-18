@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Website - Ton Objectif</title>
+    <meta name="description" content="Découvre ton programme fitness idéal en 30 secondes avec le quiz Power Website. Perte de poids, musculation, nutrition : reçois ton bilan personnalisé gratuit.">
+    <meta name="keywords" content="quiz fitness, bilan gratuit musculation, programme sport personnalisé, coaching sportif, perte de poids, nutrition sportive">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.powerwebsite.fr/">
+    <meta property="og:title" content="Power Website - Trouve ton objectif fitness">
+    <meta property="og:description" content="Découvre ton programme fitness idéal en 30 secondes avec le quiz Power Website. Reçois ton bilan personnalisé gratuit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.powerwebsite.fr/">
+    <meta property="og:image" content="https://www.powerwebsite.fr/assets/images/logo.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <main>
+    <h1>Bienvenue sur Power Website</h1>
+    <p>Quel est ton objectif prioritaire aujourd'hui ?</p>
+
+    <button onclick="choisir('perte_de_poids')">Perte de poids</button>
+    <button onclick="choisir('renforcement_musculaire')">Musculation</button>
+    <button onclick="choisir('nutrition')">Nutrition & Santé</button>
+
+    <div id="resultat">
+      <form
+        id="formulaire-email"
+        action="pages/accueil.html"
+        method="POST"
+        style="display: none; margin-top: 30px"
+      >
+        <p>REÇOIS TON BILAN OFFERT</p>
+
+        <input type="hidden" name="goal_id" id="hidden-goal-id" />
+
+        <label for="champ-nom" class="sr-only">Ton prénom</label>
+        <input
+          type="text"
+          id="champ-nom"
+          name="nom"
+          class="champ-texte"
+          placeholder="TON PRÉNOM"
+          required
+        />
+        <br />
+        <label for="champ-email" class="sr-only">Ton email</label>
+        <input
+          type="email"
+          id="champ-email"
+          name="email"
+          class="champ-texte"
+          placeholder="TON EMAIL"
+          required
+        />
+        <br />
+        <button type="submit" class="btn-inscription">
+          S'inscrire
+        </button>
+      </form>
+
+      <p class="lien-secondaire">
+        Déjà un compte ? <a href="pages/connexion.html">Se connecter</a>
+      </p>
+    </div>
+    </main>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

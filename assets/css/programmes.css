@@ -1,0 +1,45 @@
+/* programmes.css - styles spécifiques à la page programmes */
+
+body {
+    background-color: #111;
+    color: white;
+    padding-top: 80px;
+}
+
+.card {
+    background-color: #222;
+    border: 1px solid #c99c3a;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: gold;
+}
+
+.card-img-top {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.card {
+    height: 100% !important;
+}
+
+.btn-gold {
+    background-color: #c99c3a;
+    color: black;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-gold:hover {
+    background-color: gold;
+}
+
+.card-title-custom {
+    font-size: 1.25rem;
+}

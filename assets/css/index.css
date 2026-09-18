@@ -1,0 +1,101 @@
+/* index.css - styles spécifiques à la page quiz (index) */
+
+body {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding-top: 80px;
+    background-color: #000000;
+    color: #c99c3a;
+    margin: 0;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    color: #ffffff;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #c99c3a;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 20px;
+    color: #c99c3a;
+    margin-bottom: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 20px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid #c99c3a;
+    background-color: transparent;
+    color: #c99c3a;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s all;
+}
+
+button:hover {
+    background-color: #c99c3a;
+    color: #000000;
+    box-shadow: 0 0 20px rgba(201, 156, 58, 0.4);
+}
+
+#resultat {
+    margin-top: 60px;
+}
+
+.champ-texte {
+    background: transparent;
+    border: 1px solid #c99c3a;
+    color: white;
+    padding: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.champ-texte:last-of-type {
+    margin-bottom: 0;
+}
+
+.btn-inscription {
+    background-color: #c99c3a;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.lien-secondaire {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.lien-secondaire a {
+    color: #c99c3a;
+    text-decoration: underline;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Power Website</title>
+    <meta name="description" content="Contactez un coach Power Website pour toute question sur nos programmes de musculation, nutrition ou nos abonnements. Réponse rapide garantie.">
+    <meta name="keywords" content="contact coach sportif, support Power Website, question programme fitness">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.powerwebsite.fr/pages/contact.html">
+    <meta property="og:title" content="Contact - Power Website">
+    <meta property="og:description" content="Contactez un coach Power Website pour toute question sur nos programmes ou nos abonnements.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.powerwebsite.fr/pages/contact.html">
+    <meta property="og:image" content="https://www.powerwebsite.fr/assets/images/logo.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+       <a class="navbar-brand" href="accueil.html" style="position: relative;" aria-hidden="true" tabindex="-1">
+        <img src="../assets/images/logo.png" alt=""
+             style="height: 50px; width: auto; position: absolute; top: -17px; left: 0; z-index: 1000;">
+    </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#monMenu" aria-label="Ouvrir le menu de navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="monMenu">
+          <ul class="navbar-nav ms-auto"> <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="programmes.html">Programmes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card-contact p-4 p-md-5">
+                <h1 class="sr-only">Contact - Power Website</h1>
+                <h2 class="text-center text-gold fw-bold mb-4">CONTACTEZ UN COACH</h2>
+                <p class="text-center mb-4">Une question sur nos programmes ? Laissez-nous un message.</p>
+                
+                <form action="accueil.html" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label" for="champ-nom">Nom Complet</label>
+                        <input type="text" id="champ-nom" name="nom" class="form-control" placeholder="Ex: Jean Dupont" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label" for="champ-email">Adresse Email</label>
+                        <input type="email" id="champ-email" name="email" class="form-control" placeholder="nom@exemple.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="champ-sujet">Sujet</label>
+                        <select id="champ-sujet" name="sujet" class="form-control">
+                            <option value="programme">Question sur un programme</option>
+                            <option value="tarif">Tarifs et abonnements</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label" for="champ-message">Message</label>
+                        <textarea id="champ-message" name="message" class="form-control" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-gold w-100 py-2">ENVOYER LE MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer class="py-4 bg-black text-center" style="color: #b0b0b0;">
+        <p> 2026 Power Website - Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* contact.css - styles spécifiques à la page contact */
+
+body {
+    background-color: #111;
+    color: white;
+    padding-top: 100px;
+}
+
+.card-contact {
+    background-color: #1a1a1a;
+    border: 1px solid #c99c3a;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(201, 156, 58, 0.2);
+}
+
+.form-control {
+    background-color: #222;
+    border: 1px solid #444;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: #333;
+    border-color: #c99c3a;
+    color: white;
+    box-shadow: none;
+}
+
+.btn-gold {
+    background-color: #c99c3a;
+    color: black;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: gold;
+    transform: scale(1.02);
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Website - Connexion</title>
+    <meta name="description" content="Connecte-toi à ton espace personnel Power Website pour accéder à tes programmes d'entraînement et suivre ta progression.">
+    <meta name="keywords" content="connexion compte, espace membre, coaching sportif, Power Website">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.powerwebsite.fr/pages/connexion.html">
+    <meta property="og:title" content="Power Website - Connexion">
+    <meta property="og:description" content="Connecte-toi à ton espace personnel Power Website pour accéder à tes programmes d'entraînement.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.powerwebsite.fr/pages/connexion.html">
+    <meta property="og:image" content="https://www.powerwebsite.fr/assets/images/logo.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/connexion.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Bon retour</h1>
+      <p>Connecte-toi à ton compte</p>
+
+      <form action="accueil.html" method="POST">
+        <label for="champ-email" class="sr-only">Ton email</label>
+        <input
+          type="email"
+          id="champ-email"
+          name="email"
+          placeholder="TON EMAIL"
+          required
+        />
+        <br />
+
+        <label for="champ-password" class="sr-only">Ton mot de passe</label>
+        <input
+          type="password"
+          id="champ-password"
+          name="password"
+          placeholder="MOT DE PASSE"
+          required
+        />
+        <br />
+
+        <button type="submit">Se connecter</button>
+      </form>
+
+      <p class="lien-secondaire">
+        Pas encore de compte ? <a href="../index.html">Inscris-toi ici</a>
+      </p>
+    </main>
+  </body>
+</html>
