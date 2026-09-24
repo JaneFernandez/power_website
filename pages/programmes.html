@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programmes - Power Website</title>
     <meta name="description" content="Découvre nos programmes d'entraînement : prise de masse, nutrition pro et sèche/cardio. Des plans personnalisés pour atteindre tes objectifs en 12 semaines.">
-    <meta name="keywords" content="programme prise de masse, programme sèche, programme cardio, nutrition pro, entraînement musculation">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.powerwebsite.fr/pages/programmes.html">
+
+    <!-- Favicon (Cr 1.e.9) -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
     <meta property="og:title" content="Programmes - Power Website">
     <meta property="og:description" content="Prise de masse, nutrition pro et sèche/cardio : des plans personnalisés pour atteindre tes objectifs.">
     <meta property="og:type" content="website">
@@ -18,13 +21,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/programmes.css">
+
+    <!-- Fil d'Ariane + liste des programmes (Cr 1.e.3) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.powerwebsite.fr/pages/accueil.html" },
+        { "@type": "ListItem", "position": 2, "name": "Programmes", "item": "https://www.powerwebsite.fr/pages/programmes.html" }
+      ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Lien d'évitement (Cr 1.c.4) -->
+    <a class="lien-evitement" href="#contenu-principal">Aller au contenu principal</a>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Navigation principale">
       <div class="container">
-       <a class="navbar-brand" href="accueil.html" style="position: relative;" aria-hidden="true" tabindex="-1">
-        <img src="../assets/images/logo.png" alt=""
+       <a class="navbar-brand" href="accueil.html" style="position: relative;">
+        <img src="../assets/images/logo.png" alt="Power Website"
+             width="150" height="50"
              style="height: 50px; width: auto; position: absolute; top: -17px; left: 0; z-index: 1000;">
     </a>
 
@@ -33,61 +51,71 @@
         </button>
 
         <div class="collapse navbar-collapse" id="monMenu">
-          <ul class="navbar-nav ms-auto"> <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="../index.html">Quiz</a></li>
-            <li class="nav-item"><a class="nav-link" href="programmes.html">Programmes</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="accueil.html" title="Retour à l'accueil">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html" title="Faire le quiz d'objectif">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="programmes.html" title="Voir tous les programmes">Programmes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" title="Contacter un coach">Contact</a></li>
+            <li class="nav-item">
+              <button id="bouton-police-dyslexie" type="button" class="btn-accessibilite" aria-pressed="false">
+                Police dyslexie
+              </button>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
+<main id="contenu-principal">
 <div class="container my-5">
     <h1 class="sr-only">Programmes - Power Website</h1>
     <h2 class="text-center text-gold mb-5 fw-bold">NOS PROGRAMMES D'ENTRAÎNEMENT</h2>
-    
+
     <div class="row g-4">
-        <div class="col-md-4">
+        <!-- Ancre de navigation intra-page, ciblée depuis accueil.html (Cr 1.e.11) -->
+        <article class="col-md-4" id="prise-de-masse">
             <div class="card h-100 p-3">
-                <img src="../assets/images/volume.jpg" class="card-img-top" alt="Prise de masse">
+                <img src="../assets/images/volume.jpg" class="card-img-top" width="400" height="250" loading="lazy" alt="Prise de masse">
                 <div class="card-body text-center">
                     <h3 class="card-title text-gold card-title-custom">PRISE DE MASSE</h3>
-                    <p class="card-text">Un programme intensif de 12 semaines pour maximiser votre volume musculaire.</p>
-                    <a href="#" class="btn btn-gold w-100">DÉCOUVRIR</a>
+                    <p class="card-text">Un programme intensif de <strong>12 semaines</strong> pour maximiser votre volume musculaire.</p>
+                    <a href="contact.html?sujet=programme" class="btn btn-gold w-100" title="Être recontacté au sujet du programme Prise de masse">DÉCOUVRIR</a>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="col-md-4">
+        <article class="col-md-4" id="nutrition-pro">
             <div class="card h-100 p-3">
-                <img src="../assets/images/nutrition.jpg" class="card-img-top" alt="Nutrition">
+                <img src="../assets/images/nutrition.jpg" class="card-img-top" width="400" height="250" loading="lazy" alt="Nutrition">
                 <div class="card-body text-center">
                     <h3 class="card-title text-gold card-title-custom">NUTRITION PRO</h3>
-                    <p class="card-text">Plans alimentaires personnalisés pour accompagner vos efforts physiques.</p>
-                    <a href="#" class="btn btn-gold w-100">DÉCOUVRIR</a>
+                    <p class="card-text"><strong>Plans alimentaires personnalisés</strong> pour accompagner vos efforts physiques.</p>
+                    <a href="contact.html?sujet=programme" class="btn btn-gold w-100" title="Être recontacté au sujet du programme Nutrition Pro">DÉCOUVRIR</a>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="col-md-4">
+        <article class="col-md-4" id="seche-cardio">
             <div class="card h-100 p-3">
-                <img src="../assets/images/cardio.jpg" class="card-img-top" alt="Perte de poids">
+                <img src="../assets/images/cardio.jpg" class="card-img-top" width="400" height="250" loading="lazy" alt="Perte de poids">
                 <div class="card-body text-center">
                     <h3 class="card-title text-gold card-title-custom">SÈCHE / CARDIO</h3>
-                    <p class="card-text">Brûlez les graisses tout en conservant votre énergie et votre muscle.</p>
-                    <a href="#" class="btn btn-gold w-100">DÉCOUVRIR</a>
+                    <p class="card-text">Brûlez les graisses tout en conservant votre <strong>énergie</strong> et votre <strong>muscle</strong>.</p>
+                    <a href="contact.html?sujet=programme" class="btn btn-gold w-100" title="Être recontacté au sujet du programme Sèche / Cardio">DÉCOUVRIR</a>
                 </div>
             </div>
-        </div>
-        
+        </article>
+
     </div>
 </div>
+</main>
 
     <footer class="py-4 bg-black text-center" style="color: #b0b0b0;">
-        <p> 2026 Power Website - Tous droits réservés.</p>
+        <p>&copy; 2026 Power Website - Tous droits réservés.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
 
 </body>
 </html>

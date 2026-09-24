@@ -1,4 +1,6 @@
-/* programmes.css - styles spécifiques à la page programmes */
+/* programmes.css - styles spécifiques à la page programmes
+   (Les règles .card / .card-img-top communes à plusieurs pages
+   vivent maintenant dans common.css - Cr 1.d.4) */
 
 body {
     background-color: #111;
@@ -18,17 +20,6 @@ body {
     border-color: gold;
 }
 
-.card-img-top {
-    width: 100% !important;
-    height: 250px !important;
-    object-fit: cover !important;
-    display: block !important;
-}
-
-.card {
-    height: 100% !important;
-}
-
 .btn-gold {
     background-color: #c99c3a;
     color: black;
@@ -42,4 +33,10 @@ body {
 
 .card-title-custom {
     font-size: 1.25rem;
+}
+
+/* Compense la navbar fixe quand on arrive via une ancre depuis
+   accueil.html (ex: programmes.html#prise-de-masse) (Cr 1.e.11) */
+article[id] {
+    scroll-margin-top: 90px;
 }

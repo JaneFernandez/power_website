@@ -1,9 +1,20 @@
-/* common.css - classes utilitaires partagées par toutes les pages */
+/* ============================================================
+   common.css
+   Classes utilitaires et règles partagées par TOUTES les pages.
+   Toute règle utilisée sur 2 pages ou plus doit vivre ici,
+   jamais être dupliquée dans un CSS de page (Cr 1.d.4).
+   ============================================================ */
 
+/* --- Couleurs et texte utilitaire --- */
 .text-gold {
     color: #c99c3a;
 }
 
+.text-muted-accessible {
+    color: #495057 !important;
+}
+
+/* --- Accessibilité : masqué visuellement mais lu par les lecteurs d'écran --- */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -14,4 +25,160 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* --- Lien d'évitement ("Aller au contenu") : Cr 1.c.4, navigation clavier --- */
+.lien-evitement {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background-color: #c99c3a;
+    color: #000000;
+    padding: 12px 20px;
+    z-index: 2000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: top 0.2s ease-in-out;
+}
+
+.lien-evitement:focus {
+    top: 0;
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* --- Focus clavier visible partout (Cr 1.c.4) --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #c99c3a;
+    outline-offset: 2px;
+}
+
+/* --- Cartes images : règle mutualisée (anciennement dupliquée dans
+   accueil.css ET programmes.css - Cr 1.d.4) --- */
+.card-img-top {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.card {
+    height: 100% !important;
+}
+
+/* ============================================================
+   Police OpenDyslexic (Cr 1.c.2)
+   Chargée une seule fois ici, activable via le bouton "Police
+   dyslexie" présent dans la navigation (voir common.js).
+   ============================================================ */
+@font-face {
+    font-family: 'OpenDyslexic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@latest/latin-400-normal.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@latest/latin-400-normal.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@latest/latin-700-normal.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@latest/latin-700-normal.woff') format('woff');
+}
+
+/* Appliquée au <body> via la classe .police-dyslexie ajoutée en JS */
+body.police-dyslexie,
+body.police-dyslexie * {
+    font-family: 'OpenDyslexic', "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+/* --- Bouton bascule police dyslexie, commun à toutes les navbars --- */
+.btn-accessibilite {
+    background: transparent;
+    border: 1px solid #c99c3a;
+    color: #c99c3a;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-accessibilite:hover,
+.btn-accessibilite[aria-pressed="true"] {
+    background-color: #c99c3a;
+    color: #000000;
+}
+
+/* ============================================================
+   Navigation et pied de page "simples" (pages sans Bootstrap :
+   index.html et connexion.html). Mutualisés ici pour éviter la
+   duplication (Cr 1.d.4) et garantir une navigation cohérente
+   sur tout le site (Cr 1.e.10).
+   ============================================================ */
+header nav[aria-label="Navigation principale"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10px;
+    background-color: #000000;
+    border-bottom: 1px solid #c99c3a;
+}
+
+header nav[aria-label="Navigation principale"] a {
+    color: #c99c3a;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+header nav[aria-label="Navigation principale"] a:hover,
+header nav[aria-label="Navigation principale"] a:focus-visible {
+    color: #ffffff;
+}
+
+.pied-de-page {
+    padding: 25px 15px;
+    text-align: center;
+    background-color: #000000;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+/* Sur mobile : espacements resserrés pour éviter le débordement horizontal
+   (Cr 1.b.1 - adaptation aux petites résolutions) */
+@media (max-width: 576px) {
+    header nav[aria-label="Navigation principale"] {
+        gap: 12px;
+        padding: 15px 8px;
+    }
+
+    header nav[aria-label="Navigation principale"] a {
+        font-size: 0.75rem;
+    }
+}
+
+/* --- Respect de la préférence "mouvement réduit" --- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
 }

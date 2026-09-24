@@ -3,10 +3,13 @@
 body {
     font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
-    padding-top: 80px;
     background-color: #000000;
     color: #c99c3a;
     margin: 0;
+}
+
+main {
+    padding: 40px 20px 60px;
 }
 
 h1 {
@@ -36,6 +39,7 @@ p {
     letter-spacing: 5px;
 }
 
+/* Boutons du quiz : disposés en ligne sur desktop, empilés sur mobile */
 button {
     display: inline-block;
     padding: 20px 40px;
@@ -62,12 +66,15 @@ button:hover {
     margin-top: 60px;
 }
 
+/* Champs de saisie : largeur fluide avec un maximum, pour rester
+   utilisables sur petits écrans (Cr 1.b.1) */
 .champ-texte {
     background: transparent;
     border: 1px solid #c99c3a;
     color: white;
     padding: 15px;
-    width: 250px;
+    width: 100%;
+    max-width: 320px;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -98,4 +105,25 @@ button:hover {
 .lien-secondaire a {
     color: #c99c3a;
     text-decoration: underline;
+}
+
+/* --- Adaptation mobile (Cr 1.b.1 / Cr 6.d.3) --- */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin-bottom: 35px;
+    }
+
+    button {
+        padding: 15px 25px;
+        font-size: 16px;
+        margin: 8px;
+        width: 100%;
+        max-width: 320px;
+    }
 }

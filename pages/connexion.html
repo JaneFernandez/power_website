@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Power Website - Connexion</title>
     <meta name="description" content="Connecte-toi à ton espace personnel Power Website pour accéder à tes programmes d'entraînement et suivre ta progression.">
-    <meta name="keywords" content="connexion compte, espace membre, coaching sportif, Power Website">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.powerwebsite.fr/pages/connexion.html">
+
+    <!-- Favicon (Cr 1.e.9) -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
     <meta property="og:title" content="Power Website - Connexion">
     <meta property="og:description" content="Connecte-toi à ton espace personnel Power Website pour accéder à tes programmes d'entraînement.">
     <meta property="og:type" content="website">
@@ -17,11 +20,39 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="../assets/css/common.css" />
     <link rel="stylesheet" href="../assets/css/connexion.css" />
+
+    <!-- Fil d'Ariane structuré (Cr 1.e.3) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.powerwebsite.fr/pages/accueil.html" },
+        { "@type": "ListItem", "position": 2, "name": "Connexion", "item": "https://www.powerwebsite.fr/pages/connexion.html" }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <main>
+    <!-- Lien d'évitement (Cr 1.c.4) -->
+    <a class="lien-evitement" href="#contenu-principal">Aller au contenu principal</a>
+
+    <!-- Navigation cohérente avec le reste du site (Cr 1.e.10) -->
+    <header>
+      <nav aria-label="Navigation principale">
+        <a href="../index.html">Quiz</a>
+        <a href="accueil.html">Accueil</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="contact.html">Contact</a>
+        <button id="bouton-police-dyslexie" type="button" class="btn-accessibilite" aria-pressed="false">
+          Police dyslexie
+        </button>
+      </nav>
+    </header>
+
+    <main id="contenu-principal">
       <h1>Bon retour</h1>
-      <p>Connecte-toi à ton compte</p>
+      <p>Connecte-toi à ton <strong>compte</strong></p>
 
       <form action="accueil.html" method="POST">
         <label for="champ-email" class="sr-only">Ton email</label>
@@ -44,12 +75,18 @@
         />
         <br />
 
-        <button type="submit">Se connecter</button>
+        <button type="submit" title="Envoyer le formulaire de connexion">Se connecter</button>
       </form>
 
       <p class="lien-secondaire">
-        Pas encore de compte ? <a href="../index.html">Inscris-toi ici</a>
+        Pas encore de compte ? <a href="../index.html" title="Retour au quiz d'inscription">Inscris-toi ici</a>
       </p>
     </main>
+
+    <footer class="pied-de-page">
+      <p>&copy; 2026 Power Website - Tous droits réservés.</p>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
   </body>
 </html>

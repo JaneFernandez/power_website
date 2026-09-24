@@ -1,4 +1,6 @@
-/* accueil.css - styles spécifiques à la page d'accueil */
+/* accueil.css - styles spécifiques à la page d'accueil
+   (Les règles .card / .card-img-top communes à plusieurs pages
+   vivent maintenant dans common.css - Cr 1.d.4) */
 
 body, html {
     margin: 0;
@@ -49,17 +51,8 @@ body, html {
     text-align: center;
 }
 
-.card-img-top {
-    width: 100% !important;
-    height: 250px !important;
-    object-fit: cover !important;
-    display: block !important;
-}
-
-.card {
-    height: 100% !important;
-}
-
-.text-muted-accessible {
-    color: #495057 !important;
+/* Ancres de navigation (#programmes, #abonnements) : compense la
+   navbar fixe pour que le titre ciblé ne soit pas masqué (Cr 1.e.11) */
+section[id] {
+    scroll-margin-top: 90px;
 }
